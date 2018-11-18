@@ -15,35 +15,37 @@ int mycount (int a, int b){
 }
 
 int mycount (string a, char b ){
-        int occ = 0;
-        unsigned i =0;
+        unsigned int occ=0, i = 0;
         while (i < a.length()){
                 if (a[i] == b){
                         occ++;
+                        break;
                 }
+                occ++;
                 i++;
         }
+        if (occ == 0){
+                return -1;
+        }
         return occ;
+
 }
 
 int main(int argc, char** argv){
         int n1, n2;
         string s;
         char c;
-        cout << "Enter a number: ";
-        cin >> n1;
-
-        cout << "Enter another number: ";
-        cin >> n2;
-
         cout << "Enter a string: " ;
         getline(cin, s);
-
         cout << "Enter character: " ;
-        getchar();
-
         cin >> c;
+        cout << mycount(s,c) << endl; //call the function for string
 
-        cout << mycount(n1,n2) << endl;
-        cout << mycount(s,c) << endl;
+        cout << "Enter a number: ";
+        cin >> n1;
+        cout << "Enter another number: ";
+        cin >> n2;
+        cout << mycount(n1,n2) << endl; //call the function for integer
+
+        return 0;
 }
