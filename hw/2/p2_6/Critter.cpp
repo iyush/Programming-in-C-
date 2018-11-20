@@ -2,20 +2,19 @@
 #include "Critter.h"
 
 //using namespace std;
-using namespace Critter;
 
-void setName(std::string& newname) {
+void Critter::setName(std::string& newname) {
 	name = newname;
 }
 
-void setHunger(int newhunger) {
+void Critter::setHunger(int newhunger) {
 	hunger = newhunger;
 }
 
-void print() {
-        std::cout << "I am " << name << ". My hunger level is " << hunger << "." << std::endl;
+void Critter::print() {
+  std::cout << "I am " << name << ". My hunger level is " << hunger << "." << std::endl;
 }
 
-int getHunger() {
+int Critter::getHunger() {
 	return hunger;
 }

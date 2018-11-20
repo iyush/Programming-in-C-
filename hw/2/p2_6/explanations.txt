@@ -1,18 +1,24 @@
-Explanations:
+a)
 
 If we comment the line:
 
 using namespace std;
 
-in Critter.cpp. The compiler will not detect "string" in line:
+in Critter.cpp. The compiler will not detect "string" in line 6:
 
 void Critter::setName(string& ...
 
-and it will not know that cout and endl means in: 
+and it will not know that cout and endl means in 15: 
 
 void Critter::print() {
         cout << "I am " << name << ". My hunger level is " << hunger << "." << endl;
 }
+
+Interpretations: 
+
+Namespace is commonly used to distinguish between same named identifiers. When we comment it out, C++ complier cannot distinguish between normal identiers and builtin identifiers. It sees that there are variables which are not decleared in the program and throws back an error
+
+Solution: (uploaded to grader)
 
 if order to fix this we can either either uncomment the namespace or mention the name of the class these methods(string, cout and cin) belong to for example:
 
@@ -22,10 +28,17 @@ void Critter::print() {
 
 void Critter::setName(std::string& ...
 
-If we comment remove the Critter:: prefix in one of the methods in Critter.cpp. We get similar errors of undeclared variables. We can mitigate the error by rementioning class names. We could have used: 
-
-use namespace Critter;
-
-but we must first declare the namespace definition in order to do so.
 
 
+
+b)
+
+If we comment remove the Critter:: prefix in one of the methods in Critter.cpp. We get similar set of errors of undecleared variable because the complier sees the variables like setName, setNumber, print and getHunger decleared it as new variables, but does not se the declearation of varbiables name and hunger. So it returns back an error.
+
+Solution: (uploaded to Grader)
+
+An alternative solution to the problem would be writting the down the functions inside the header file. It would eliminate the need of specifier "Critter::".
+
+One should omit the file Critter.cpp if he/she choose the alternative method during compliation. I used the following command for the compliation of the program
+
+g++ -o testcritter.o testcritter.cpp  -Wall
