@@ -47,16 +47,16 @@ char myfirst( char *x, int n){
 
 int main(int argc, char** argv){
         int list[5] = {-3,2,6,-4,9};
-        cout << myfirst(list, 5) <<endl; 
         //calling the function for list of integers
+        cout << myfirst(list, 5) <<endl; 
         
         double listOfArray[5] = {1.1,1.2,1.3,1.4,14.0};
-        cout << myfirst(listOfArray, 5) <<endl;                        
         //calling the function for list of doubles
+        cout << myfirst(listOfArray, 5) <<endl;           
 
-        char listOfChars[5] = {'b','b','c','d','E'};
-        cout << myfirst(listOfChars, 5) <<endl;                        
+        char listOfChars[5] = {'b','b','c','d','E'};              
         //calling the function for list of chars
+        cout << myfirst(listOfChars, 5) <<endl;          
         return 0;
 
 }

@@ -22,4 +22,5 @@ int main (int argc, char** argv){
                 }
         }
         cout << str << endl;
+        return 0;
 }
