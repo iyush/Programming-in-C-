@@ -11,11 +11,11 @@ a.sharmaacharya@jacobs-university.de
 using namespace std;
 
 void Critter::setName(string& newname) {
-	name = newname;
+  name = newname;
 }
 
 void Critter::setHunger(int newhunger) {
-	hunger = newhunger;
+  hunger = newhunger;
 }
 
 // new methods
@@ -28,40 +28,40 @@ void Critter::setWeight(double newweight) {
 
 //modified print
 void Critter::print() {
-        cout << 
-                "I am " 
-                << 
-                name 
-                << 
-                ". My hunger level is " 
-                << 
-                hunger 
-                << 
-                "." 
-                << 
-                " I am " 
-                << 
-                color 
-                << 
-                " in color. " 
-                <<
-                "I weigh " 
-                << 
-                weight 
-                << 
-                " grams." 
-                << 
-                endl;
+  cout << 
+          "I am " 
+          << 
+          name 
+          << 
+          ". My hunger level is " 
+          << 
+          hunger 
+          << 
+          "." 
+          << 
+          " I am " 
+          << 
+          color 
+          << 
+          " in color. " 
+          <<
+          "I weigh " 
+          << 
+          weight 
+          << 
+          " grams." 
+          << 
+          endl;
 }
 
 int Critter::getHunger() {
-	return hunger;
+  return hunger;
 }
 
 string Critter::getColor() {
-	return color;
+  return color;
 }
 
 double Critter::getWeight() {
-	return weight;
+  return weight;
 }

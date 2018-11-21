@@ -17,10 +17,10 @@ int main(int argc, char** argv)
 
 	string name;
 	int hunger;
-  //new variable declearation
-  string color;
-  double weight;
- 
+	//new variable declearation
+	string color;
+	double weight;
+
 	cout << endl << "Please enter data: " << endl;
 	cout << "Name: ";
 	// cin >> name; will not work if name contains
@@ -40,5 +40,5 @@ int main(int argc, char** argv)
 	c.setWeight(weight);
 	cout << "You have created:" << endl;
 	c.print();
-        return 0;
+	return 0;
 }

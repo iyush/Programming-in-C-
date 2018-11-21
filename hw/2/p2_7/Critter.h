@@ -10,29 +10,29 @@ a.sharmaacharya@jacobs-university.de
 /* First C++ class */
 class Critter
 {
-private:  // data members are private
-	std::string name;
-	int hunger;
-	int boredom;
-	double height;
-  std::string color;
-  double weight;
+	private:  // data members are private
+		std::string name;
+		int hunger;
+		int boredom;
+		double height;
+		std::string color;
+		double weight;
 
-public: // business logic methods are public
-	// setter methods
-	void setName(std::string& newname);
-	void setHunger(int newhunger);
-	void setBoredom(int newboredom);
-  //new added setters
-  void setColor(std::string& newcolor);
-	void setWeight(double newweight);
+	public: // business logic methods are public
+		// setter methods
+		void setName(std::string& newname);
+		void setHunger(int newhunger);
+		void setBoredom(int newboredom);
+		//new added setters
+		void setColor(std::string& newcolor);
+		void setWeight(double newweight);
 
-	// getter method
-	int getHunger();
-  //new added getters
-  std::string getColor();
-  double getWeight();
+		// getter method
+		int getHunger();
+		//new added getters
+		std::string getColor();
+		double getWeight();
 
-	// service method
-	void print();
+		// service method
+		void print();
 };
