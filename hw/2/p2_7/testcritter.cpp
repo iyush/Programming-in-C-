@@ -21,7 +21,7 @@ int main(int argc, char** argv)
 	string color;
 	double weight;
 
-	cout << endl << "Please enter data: " << endl;
+	cout << "Please enter data: " << endl;
 	cout << "Name: ";
 	// cin >> name; will not work if name contains
 	// spaces
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
 	cin >> color;
 	c.setColor(color);
 
-	cout << "Weight (in grams): ";
+  cout << "Weight (in grams): ";
 	cin >> weight;
 	c.setWeight(weight);
 	cout << "You have created:" << endl;
